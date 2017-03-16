@@ -2,7 +2,7 @@
 
 ## DiUS Tennis API
 
-##### Create a tennis match
+#### Create a tennis match
 
 ```javascript
 const tennisMatch = diusTennis.createTennisMatch(player_1, player_2)
@@ -12,14 +12,14 @@ const tennisMatch = diusTennis.createTennisMatch(player_1, player_2)
 Example
 
 ```javascript
-const diusTennis = require("./index")
+const diusTennis = require("../app/index")
 
 const player_1 = "Bob"
 const player_2 = "John"
 
 const tennisMatch = diusTennis.createTennisMatch(player_1, player_2)
 ```
-##### Player wins a point
+#### Player wins a point
 
 ```javascript
 const updatedMatch = playerWonPoint(playerName)(tennisMatch)
@@ -31,7 +31,7 @@ It returns new and updated `tennisMatch`.
 Example
 
 ```javascript
-const diusTennis = require("./index")
+const diusTennis = require("../app/index")
 
 const player_1 = "Adam"
 const player_2 = "David"
@@ -41,7 +41,7 @@ const tennisMatch = diusTennis.createTennisMatch(player_1, player_2)
 const afterPointWon = diusTennis.playerWonPoint(player_1)(tennisMatch)
 
 ```
-##### Get the score
+#### Get the score
 
 ```javascript
 const score = getScore(tennisMatch)
@@ -52,7 +52,7 @@ const score = getScore(tennisMatch)
 Example
 
 ```javascript
-const diusTennis = require("./index")
+const diusTennis = require("../app/index")
 
 const player_1 = "Adam"
 const player_2 = "David"
