@@ -52,7 +52,7 @@ const wonPointInTieBreak = ({winner, loser}) => {
     } else {
         return {
             loser,
-            winner: Object.assign({}, winner, {tieBreak: winnerTieBreak+1})
+            winner: Object.assign({}, winner, {tieBreak: winnerTieBreak + 1})
         }
     }
 }
@@ -72,7 +72,7 @@ const wonGame = ({winner, loser}) => {
         }
     } else {
         return {
-            winner: Object.assign({}, winner, {points: 0, games: winnerGames+1}),
+            winner: Object.assign({}, winner, {points: 0, games: winnerGames + 1}),
             loser: Object.assign({}, loser, {points: 0})
         }
     }
