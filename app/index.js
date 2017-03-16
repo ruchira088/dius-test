@@ -17,16 +17,13 @@ const createFreshScore = () => Object.keys(SCORE_TYPES)
  * player_1 and player_2 arguments can be any type
  *
  */
-const createTennisMatch = (player_1, player_2) => {
-
-    return {
-        players: { player_1, player_2 },
-        score: {
-            player_1: createFreshScore(),
-            player_2: createFreshScore()
-        }
+const createTennisMatch = (player_1, player_2) => ({
+    players: { player_1, player_2 },
+    score: {
+        player_1: createFreshScore(),
+        player_2: createFreshScore()
     }
-}
+})
 
 /**
  * Gets the key of the player. (Whether it is player_1 or player_2)
@@ -35,8 +32,8 @@ const createTennisMatch = (player_1, player_2) => {
  * @param player: The player
  * @param mapper: The mapper function to match the player with the input argument
  */
-const getPlayerScoreKey = ({players}, player, mapper = value => value) => (
-    Object.keys(players).find(key => mapper(players[key]) == player)
+const getPlayerScoreKey = ({players}, player, getName = value => value) => (
+    Object.keys(players).find(key => getName(players[key]) == player)
 )
 
 /**
@@ -131,7 +128,7 @@ const getPlayerScores = match => scoreType => {
  * Returns true if it is a tie break and false if otherwise
  */
 const isTieBreak = match => {
-    const {player_1, player_2} = getPlayerScores(match)("games")
+    const {player_1, player_2} = getPlayerScores(match)(SCORE_TYPES.GAMES)
 
     return player_1 == 6 && player_2 == 6
 }
@@ -140,20 +137,20 @@ const isTieBreak = match => {
  * Gets the tie break score
  */
 const getTieBreakScore = match => {
-    const tieBreak = getPlayerScores(match)("tieBreak")
+    const tieBreak = getPlayerScores(match)(SCORE_TYPES.TIE_BREAK)
 
-    return `Tiebreak: ${tieBreak.player_1}-${tieBreak.player_2}`
+    return `${SCORE_TYPES.TIE_BREAK}: ${tieBreak.player_1}-${tieBreak.player_2}`
 }
 
 /**
  * Gets the description of game points
  */
-const getPointDescription = (tennisMatch, mapper = value => value) => {
+const getPointDescription = (tennisMatch, getName = value => value) => {
 
     const isDeuce = ({player_1, player_2}) => player_1 == 40 && player_2 == 40
 
     const pointDescription = match => {
-        const score = getPlayerScores(match)("points")
+        const score = getPlayerScores(match)(SCORE_TYPES.POINTS)
 
         if(isDeuce(score)) {
             return DEUCE
@@ -161,33 +158,33 @@ const getPointDescription = (tennisMatch, mapper = value => value) => {
             const advantage = Object.keys(score).find(key => score[key] == ADVANTAGE)
 
             if(advantage != null) {
-                return `Advantage ${mapper(match.players[advantage])}`
+                return `${ADVANTAGE} ${getName(match.players[advantage])}`
             } else {
                 return `${score.player_1}-${score.player_2}`
             }
         }
     }
 
-    return `Points: ${pointDescription(tennisMatch)}`
+    return `${SCORE_TYPES.POINTS}: ${pointDescription(tennisMatch)}`
 }
 
 /**
  * Gets a human readable description of the match score
  */
-const getScore = match => {
+const getScore = (match, getName = value => value) => {
 
     const getScoreForType = getPlayerScores(match)
 
-    const setScore = getScoreForType("sets")
-    const setScoreDescription = `Sets: ${setScore.player_1}-${setScore.player_2}`
+    const setScore = getScoreForType(SCORE_TYPES.SETS)
+    const setScoreDescription = `${SCORE_TYPES.SETS}: ${setScore.player_1}-${setScore.player_2}`
 
-    const gameScore = getScoreForType("games")
-    const gameScoreDescription = `Games: ${gameScore.player_1}-${gameScore.player_2}`
+    const gameScore = getScoreForType(SCORE_TYPES.GAMES)
+    const gameScoreDescription = `${SCORE_TYPES.GAMES}: ${gameScore.player_1}-${gameScore.player_2}`
 
     const pointDescription = isTieBreak(match) ? getTieBreakScore(match) : getPointDescription(match)
 
     const {players} = match
-    const playerNames = `${players.player_1}-${players.player_2}`
+    const playerNames = `${getName(players.player_1)}-${getName(players.player_2)}`
 
     return `${playerNames}, ${setScoreDescription}, ${gameScoreDescription}, ${pointDescription}`
 }

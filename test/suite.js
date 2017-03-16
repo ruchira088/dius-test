@@ -152,7 +152,7 @@ describe("DiUS test suite", () => {
                         player_2: { sets: 0, games: 0, points: 0, tieBreak: 0 }
                     }
                 },
-                output: "John-Doe, Sets: 1-0, Games: 0-0, Points: 0-0"
+                output: "John-Doe, sets: 1-0, games: 0-0, points: 0-0"
             },
             {
                 input: {
@@ -165,7 +165,7 @@ describe("DiUS test suite", () => {
                         player_2: { sets: 0, games: 6, points: 0, tieBreak: 4 }
                     }
                 },
-                output: "John-Doe, Sets: 1-0, Games: 6-6, Tiebreak: 0-4"
+                output: "John-Doe, sets: 1-0, games: 6-6, tieBreak: 0-4"
             },
             {
                 input: {
@@ -178,7 +178,7 @@ describe("DiUS test suite", () => {
                         player_2: { sets: 0, games: 5, points: 40, tieBreak: 0 }
                     }
                 },
-                output: "John-Doe, Sets: 1-0, Games: 5-5, Points: DEUCE"
+                output: "John-Doe, sets: 1-0, games: 5-5, points: DEUCE"
             },
             {
                 input: {
@@ -191,7 +191,7 @@ describe("DiUS test suite", () => {
                         player_2: { sets: 0, games: 5, points: 40, tieBreak: 0 }
                     }
                 },
-                output: "John-Doe, Sets: 1-0, Games: 5-5, Points: Advantage John"
+                output: "John-Doe, sets: 1-0, games: 5-5, points: ADVANTAGE John"
             }
         ]
 
