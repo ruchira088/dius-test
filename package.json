@@ -1,0 +1,17 @@
+{
+  "name": "dius-test",
+  "version": "1.0.0",
+  "description": "DiUS tennis exercise",
+  "main": "app/index.js",
+  "scripts": {
+    "start": "node .",
+    "test": "mocha test/suite.js",
+    "dev": "nodemon --debug=5858 ."
+  },
+  "author": "Ruchira Jayasekara <ruchira088@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}

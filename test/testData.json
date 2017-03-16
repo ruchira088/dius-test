@@ -1,0 +1,176 @@
+{
+  "wonGame": [{
+    "inputs": {
+      "winner": {"points": 0, "games": 0, "sets": 0, "tieBreak": 0},
+      "loser": {"points": 0, "games": 0, "sets": 0, "tieBreak": 0}
+    },
+    "output": {
+      "winner": {"points": 0, "games": 1, "sets": 0, "tieBreak": 0},
+      "loser": {"points": 0, "games": 0, "sets": 0, "tieBreak": 0}
+    }
+  },
+    {
+      "inputs": {
+        "winner": {"points": 0, "games": 5, "sets": 0, "tieBreak": 0},
+        "loser": {"points": 0, "games": 4, "sets": 0, "tieBreak": 0}
+      },
+      "output": {
+        "winner": {"points": 0, "games": 0, "sets": 1, "tieBreak": 0},
+        "loser": {"points": 0, "games": 0, "sets": 0, "tieBreak": 0}
+      }
+    }
+  ],
+  "wonPointInTieBreak": [
+    {
+      "inputs": {
+        "winner": {"points": 0, "games": 6, "sets": 0, "tieBreak": 0},
+        "loser": {"points": 0, "games": 6, "sets": 0, "tieBreak": 0}
+      },
+      "output": {
+        "winner": {"points": 0, "games": 6, "sets": 0, "tieBreak": 1},
+        "loser": {"points": 0, "games":6, "sets": 0, "tieBreak": 0}
+      }
+    },
+    {
+      "inputs": {
+        "winner": {"points": 0, "games": 6, "sets": 0, "tieBreak": 6},
+        "loser": {"points": 0, "games": 6, "sets": 0, "tieBreak": 6}
+      },
+      "output": {
+        "winner": {"points": 0, "games": 6, "sets": 0, "tieBreak": 7},
+        "loser": {"points": 0, "games":6, "sets": 0, "tieBreak": 6}
+      }
+    },
+    {
+      "inputs": {
+        "winner": {"points": 0, "games": 6, "sets": 0, "tieBreak": 8},
+        "loser": {"points": 0, "games": 6, "sets": 0, "tieBreak": 8}
+      },
+      "output": {
+        "winner": {"points": 0, "games": 6, "sets": 0, "tieBreak": 9},
+        "loser": {"points": 0, "games":6, "sets": 0, "tieBreak": 8}
+      }
+    },
+    {
+      "inputs": {
+        "winner": {"points": 0, "games": 6, "sets": 0, "tieBreak": 9},
+        "loser": {"points": 0, "games": 6, "sets": 0, "tieBreak": 8}
+      },
+      "output": {
+        "winner": {"points": 0, "games": 0, "sets": 1, "tieBreak": 0},
+        "loser": {"points": 0, "games": 0, "sets": 0, "tieBreak": 0}
+      }
+    }
+  ],
+  "wonPoint": [{
+    "inputs": {
+      "winner": {"points": 0, "games": 0, "sets": 0, "tieBreak": 0},
+      "loser": {"points": 0, "games": 0, "sets": 0, "tieBreak": 0}
+    },
+    "output": {
+      "winner": {"points": 15, "games": 0, "sets": 0, "tieBreak": 0},
+      "loser": {"points": 0, "games": 0, "sets": 0, "tieBreak": 0}
+    }
+  },
+  {
+    "inputs": {
+      "winner": {"points": 15, "games": 0, "sets": 0, "tieBreak": 0},
+      "loser": {"points": 0, "games": 0, "sets": 0, "tieBreak": 0}
+    },
+    "output": {
+      "winner": {"points": 30, "games": 0, "sets": 0, "tieBreak": 0},
+      "loser": {"points": 0, "games": 0, "sets": 0, "tieBreak": 0}
+    }
+  },
+    {
+      "inputs": {
+        "winner": {"points": 30, "games": 0, "sets": 0, "tieBreak": 0},
+        "loser": {"points": 0, "games": 0, "sets": 0, "tieBreak": 0}
+      },
+      "output": {
+        "winner": {"points": 40, "games": 0, "sets": 0, "tieBreak": 0},
+        "loser": {"points": 0, "games": 0, "sets": 0, "tieBreak": 0}
+      }
+    },
+    {
+      "inputs": {
+        "winner": {"points": 40, "games": 0, "sets": 0, "tieBreak": 0},
+        "loser": {"points": 0, "games": 0, "sets": 0, "tieBreak": 0}
+      },
+      "output": {
+        "winner": {"points": 0, "games": 1, "sets": 0, "tieBreak": 0},
+        "loser": {"points": 0, "games": 0, "sets": 0, "tieBreak": 0}
+      }
+    },
+    {
+      "inputs": {
+        "winner": {"points": 40, "games": 0, "sets": 0, "tieBreak": 0},
+        "loser": {"points": 40, "games": 0, "sets": 0, "tieBreak": 0}
+      },
+      "output": {
+        "winner": {"points": "ADVANTAGE", "games": 0, "sets": 0, "tieBreak": 0},
+        "loser": {"points": 40, "games": 0, "sets": 0, "tieBreak": 0}
+      }
+    },
+    {
+      "inputs": {
+        "winner": {"points": 40, "games": 0, "sets": 0, "tieBreak": 0},
+        "loser": {"points": "ADVANTAGE", "games": 0, "sets": 0, "tieBreak": 0}
+      },
+      "output": {
+        "winner": {"points": 40, "games": 0, "sets": 0, "tieBreak": 0},
+        "loser": {"points": 40, "games": 0, "sets": 0, "tieBreak": 0}
+      }
+    },
+    {
+      "inputs": {
+        "winner": {"points": "ADVANTAGE", "games": 0, "sets": 0, "tieBreak": 0},
+        "loser": {"points": 40, "games": 0, "sets": 0, "tieBreak": 0}
+      },
+      "output": {
+        "winner": {"points": 0, "games": 1, "sets": 0, "tieBreak": 0},
+        "loser": {"points": 0, "games": 0, "sets": 0, "tieBreak": 0}
+      }
+    },
+    {
+      "inputs": {
+        "winner": {"points": 0, "games": 6, "sets": 0, "tieBreak": 0},
+        "loser": {"points": 0, "games": 6, "sets": 0, "tieBreak": 0}
+      },
+      "output": {
+        "winner": {"points": 0, "games": 6, "sets": 0, "tieBreak": 1},
+        "loser": {"points": 0, "games": 6, "sets": 0, "tieBreak": 0}
+      }
+    },
+    {
+      "inputs": {
+        "winner": {"points": 40, "games": 6, "sets": 0, "tieBreak": 0},
+        "loser": {"points": 30, "games": 5, "sets": 0, "tieBreak": 0}
+      },
+      "output": {
+        "winner": {"points": 0, "games": 0, "sets": 1, "tieBreak": 0},
+        "loser": {"points": 0, "games": 0, "sets": 0, "tieBreak": 0}
+      }
+    },
+    {
+      "inputs": {
+        "winner": {"points": 0, "games": 6, "sets": 0, "tieBreak": 7},
+        "loser": {"points": 0, "games": 6, "sets": 0, "tieBreak": 7}
+      },
+      "output": {
+        "winner": {"points": 0, "games": 6, "sets": 0, "tieBreak": 8},
+        "loser": {"points": 0, "games": 6, "sets": 0, "tieBreak": 7}
+      }
+    },
+    {
+      "inputs": {
+        "winner": {"points": 0, "games": 6, "sets": 0, "tieBreak": 7},
+        "loser": {"points": 0, "games": 6, "sets": 0, "tieBreak": 6}
+      },
+      "output": {
+        "winner": {"points": 0, "games": 0, "sets": 1, "tieBreak": 0},
+        "loser": {"points": 0, "games": 0, "sets": 0, "tieBreak": 0}
+      }
+    }
+  ]
+}
