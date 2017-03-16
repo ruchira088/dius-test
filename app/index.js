@@ -30,7 +30,7 @@ const createTennisMatch = (player_1, player_2) => ({
  *
  * @param players: Players in the tennis match
  * @param player: The player
- * @param getName: The mapper function to match the player with the input argument
+ * @param getName: The mapper function to match the player with the input argument (player)
  */
 const getPlayerScoreKey = ({players}, player, getName = value => value) => (
     Object.keys(players).find(key => getName(players[key]) == player)
