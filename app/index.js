@@ -93,7 +93,7 @@ const wonPoint = ({winner, loser}) => {
     }
 
     // Check whether the winner won the game
-    if(GAME_POINTS.indexOf(points_1) >= 3 && pointDiff >= 1) {
+    if(GAME_POINTS.indexOf(points_1) >= GAME_POINTS.indexOf(40) && pointDiff >= 1) {
         return wonGame({winner, loser})
     } else {
 
